@@ -21,15 +21,15 @@ after_success:
   - docker push peelmicro/multi-server
   - docker push peelmicro/multi-worker
 # Commented out for Kubernettes
-# deploy:
-#   provider: elasticbeanstalk
-#   region: "us-east-1"
-#   app: "muti-docker"
-#   env: "MutiDocker-env"
-#   bucket_name: "elasticbeanstalk-us-east-1-972569889348"
-#   #bucket_path: ""
-#   on:
-#     branch: "master"
-#   access_key_id: $AWS_ACCESS_KEY
-#   secret_access_key:
-#     secure: "$AWS_SECRET_KEY"
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "muti-docker"
+  env: "MutiDocker-env"
+  bucket_name: "elasticbeanstalk-us-east-1-972569889348"
+  #bucket_path: ""
+  on:
+    branch: "master"
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
