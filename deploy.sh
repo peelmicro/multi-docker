@@ -1,7 +1,8 @@
 # Create the Docker Images
-docker build -t peelmicro/multi-client:lastest peelmicro/multi-client:$SHA ./client
-docker build -t peelmicro/multi-server:lastest peelmicro/multi-server:$SHA ./server
-docker build -t peelmicro/multi-worker:lastest peelmicro/multi-worker:$SHA ./worker
+docker build -t peelmicro/multi-client:latest -t peelmicro/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t peelmicro/multi-server:latest -t peelmicro/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t peelmicro/multi-worker:latest -t peelmicro/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+
 # Take those images and push them to docker hub
 docker push peelmicro/multi-client:latest
 docker push peelmicro/multi-client:$SHA
