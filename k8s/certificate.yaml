@@ -9,13 +9,12 @@ spec:
     kind: ClusterIssuer
   commonName: peelmicro.info
   dnsNames:
-    - k8s-multi.peelmicro.info
-    - www.k8s-multi.peelmicro.info
+    - peelmicro.info
+    - www.peelmicro.info
   acme:
     config:
       - http01:
         ingressClass: nginx
         domains:
-          - k8s-multi.peelmicro.info
-          - www.k8s-multi.peelmicro.info        
-
+          - peelmicro.info
+          - www.peelmicro.info
