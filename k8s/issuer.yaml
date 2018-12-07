@@ -8,4 +8,4 @@ spec:
     email: 'juanp_perez@peelmicro.info'
     privateKeySecretRef:
       name: letsencrypt-prod
-    http01: {}
+    http01: {}    
